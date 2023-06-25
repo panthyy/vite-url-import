@@ -1,0 +1,31 @@
+{
+  "name": "vite-url-import",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "bump:patch": "pnpm version patch",
+    "bump:minor": "pnpm version minor",
+    "bump:major": "pnpm version major",
+    "publish": "pnpm build && pnpm publish",
+    "publish:patch": "pnpm build && pnpm version patch && pnpm publish",
+    "publish:minor": "pnpm build && pnpm version minor && pnpm publish",
+    "publish:major": "pnpm build && pnpm version major && pnpm publish",
+    "build:watch": "tsc -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "micromatch": "^4.0.5",
+    "vite": "^4.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.0.2"
+  }
+}
