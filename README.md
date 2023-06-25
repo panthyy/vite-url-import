@@ -15,3 +15,29 @@ or pnpm:
 pnpm add vite-url-import
 ```
 
+
+## Configuration
+
+The **UrlImport** function accepts an options object with the following properties:
+- **hostname**:  (optional): Specifies the origin or CDN to fetch the dependencies from. this property is a string and defaults to `esm.sh`. 
+    - **esm.sh**: Fetches the dependencies from [esm.sh](https://esm.sh/).
+    - **cdn.skypack.dev**: Fetches the dependencies from [Skypack](https://www.skypack.dev/).
+    - **unpkg.com**: Fetches the dependencies from [unpkg](https://unpkg.com/).
+    or any other custom hostname.
+
+
+## Usage
+```js
+// vite.config.js
+import UrlImport from 'vite-url-import';
+
+export default {
+  plugins: [
+    UrlImport()
+  ]
+}
+```
+If you look in your network tab, you will see that all your dependencies are now being fetched from the specified origin instead of your local machine.
+
+## License
+This plugin is licensed under the MIT License.
